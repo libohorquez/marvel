@@ -1,0 +1,79 @@
+<nav>
+    <ul>
+        <li>
+            <img src="./assets/images/logo-marvel.png">
+        </li>
+        <li class="marvel-search">
+            <div class="marvel-form-group">
+                <input type="text" class="form-control" id="filterInput" name="filter" [(ngModel)]="filter" (ngModelChange)="refreshList($event)"
+                    placeholder="Escribe tu personaje" />
+            </div>
+        </li>
+    </ul>
+</nav>
+<section class="main">
+    <h1 class="marvel-title">
+        {{title}}
+    </h1>
+    <form class="marvel-form">
+        <div class="marvel-form-group">
+            <label for="totalOutput">Total coincidencias: </label>
+            <br />
+            <input type="number" id="totalOutput" class="form-control-sm" name="total" [(ngModel)]="total" disabled="disabled" />
+        </div>
+        <br />
+        <div class="marvel-form-group">
+            <label for="countInput">Ítems Mostrados: </label>
+            <br />
+            <select class="form-control-sm" id="countInput" name="count" [(ngModel)]="shown" (ngModelChange)="refreshList($event)">
+                <option *ngFor="let i of [5, 10, 15, 20]">
+                    {{i}}
+                </option>
+            </select>
+        </div>
+    </form>
+    <hr>
+
+    <div class="principal">
+        <article>
+            <h2 class="marvel-title-left">
+                <img src="./assets/images/icons/characters.png"> Characters</h2>
+            <div class="marvel-card-columns">
+                <div *ngFor="let character of characters" class="marvel-card marvel-flex-container">
+                    <div class="marvel-img-container">
+                        <div class="div-marvel-img hidden">
+                            <img class="img marvel-character-img" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="Imagen de personaje">
+                        </div>
+                    </div>
+                    <div class="marvel-info">
+                        <h3 class="marvel-card-title">{{character.name}}</h3>
+                        <p class="marvel-card-text">{{character.description}}</p>
+                        <p>
+                            <button class="marvel-button" (click)="openModal(character.id)">VIEW MORE</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <aside>
+            <h2 class="marvel-title-left">
+                <img src="./assets/images/icons/favourites.png"> Mis favoritos</h2>
+            <div *ngFor="let favourite of favourites" class="marvel-favourites">
+                <div class="div-marvel-img">
+                    <mat-icon class="delete div-marvel-img" (click)="deleteFavourites(favourite)">delete_forever</mat-icon>
+                </div>
+
+                <div>
+                    <img class="marvel-img-favourites" src="{{favourite.thumbnail.path}}.{{favourite.thumbnail.extension}}" alt="Comics Favoritos">
+                </div>
+                <p class="marvel-card-title">
+                    <strong>{{favourite.title}}</strong>
+                </p>
+            </div>
+        </aside>
+    </div>
+</section>
+<footer>2018</footer>
+
+<!-- <button mat-raised-button (click)="openModal()">Prueba Modal</button> -->

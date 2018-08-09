@@ -1,0 +1,37 @@
+<section class="center-modal">
+  <div class="modal-btn-close" (click)="closeModal()">
+    <mat-icon class="marvel-icon-pointer">highlight_off</mat-icon>
+  </div>
+  <p class="marvel-rnd" (click)="addRandoms()"><mat-icon>shuffle </mat-icon> Agregar Random</p>
+  <div class="text-container">
+    <div *ngFor="let comic of ModalComics" class="marvel-card marvel-flex-container">
+      <div class="marvel-modal-flex-container">
+        <div style="flex-grow: 2">
+          <div class="div-marvel-img hidden">
+            <img class="img marvel-character-img" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="Imagen de Comic">
+          </div>
+        </div>
+        <div style="flex-grow: 7">
+          <p class="marvel-may"><strong>{{comic.title}}</strong></p>
+          <p>{{comic.description}}</p>
+        </div>
+      </div>
+
+      <div class="btns-container">
+        <div class="btns modal-btn-favourites" (click)="setFavourites(comic)">
+          <img src="./assets/images/icons/btn-favourites-default.png">
+          <strong> ADD TO FAVOURITES</strong>
+        </div>
+        <div class="btns modal-btn-buy">
+          <img src="./assets/images/icons/shopping-cart-primary.png">
+          <strong> BUY FOR $3.99 </strong>
+        </div>
+      </div>
+      <br />
+      <hr>
+      <br />
+    </div>
+  </div>
+  <div>
+  </div>
+</section>

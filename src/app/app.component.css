@@ -1,0 +1,278 @@
+input[type=text],
+select,
+input[type=number]:disabled {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0 .5em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-control-sm {
+    width: 16% !important;
+}
+
+.marvel-title {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.marvel-title-left {
+    text-align: left;
+    font-size: 1.3em;
+}
+
+.marvel-title>img,
+.marvel-title-left>img {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.marvel-form {
+    margin: 2em;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* imagen */
+.marvel-character-img,
+.marvel-img-container {
+    height: 10em;
+    width: 10em !important;
+    background-position: 50%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.marvel-img-container {
+    margin: -1em 1em 1em 1em;
+}
+
+.div-marvel-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.div-marvel-img.hidden {
+    overflow: hidden;
+}
+
+.div-marvel-img .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transition: all 900ms ease-in-out;
+    -moz-transition: all 900ms ease-in-out;
+    -ms-transition: all 900ms ease-in-out;
+    -o-transition: all 900ms ease-in-out;
+}
+
+.div-marvel-img:hover .img {
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.marvel-img-favourites {
+    width: 80%;
+}
+
+.marvel-favourites {
+    text-align: center;
+}
+
+.delete {
+    float: right;
+    background: #292829;
+    color: #fff;
+    cursor: pointer;
+    
+}
+.marvel-flex-container {
+    display: inline-flex;
+    width: 48%;
+    height: 20em;
+    margin-bottom: 3em;
+    background-color: #fff;
+    margin-right: .5em;
+    margin-top: 1em;
+}
+
+.marvel-flex-container>.marvel-info {
+    width: auto;
+    margin-top: -1.8em;
+}
+
+.marvel-card-title {
+    text-transform: uppercase;
+}
+
+/* navbar styles */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    top: 0;
+    padding: .5em;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+li {
+    float: left;
+    padding: 14px 16px;
+}
+
+.marvel-search {
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+/* css home general */
+
+.principal {
+    min-height: 600px;
+    margin: 0px;
+    padding: 0px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+
+.principal>article {
+    margin: 4px;
+    padding: 5px;
+    border-radius: 7pt;
+    -webkit-flex: 3 1 60%;
+    flex: 3 1 60%;
+    -webkit-order: 2;
+    order: 2;
+}
+
+.principal>aside {
+    padding: 5px;
+    background: #ebe7e7;
+    border-radius: 7pt;
+    -webkit-flex: 1 6 20%;
+    flex: 1 6 20%;
+    -webkit-order: 3;
+    order: 3;
+}
+
+footer {
+    display: block;
+    margin: 0;
+    padding: 2em;
+    min-height: 3em;
+    background: #EC262B;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+}
+
+.marvel-button {
+    background-color: #ec262b;
+    border: none;
+    color: #fff;
+    padding: .8em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.marvel-button:hover {
+    background-color: #f5444a;
+}
+
+hr {
+    border-color: #ec262b;
+    width: 99%;
+}
+
+.main {
+    padding: 2em 2em 0;
+}
+
+/* media queries */
+
+@media all and (max-width: 640px) {
+    .principal,
+    #page {
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+    #main>article,
+    .principal>nav,
+    .principal>aside {
+        -webkit-order: 0;
+        order: 0;
+    }
+    .principal>nav,
+    .principal>aside,
+    footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .marvel-flex-container {
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .marvel-card-text {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 11em;
+        margin: .3em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .form-control-sm {
+        width: 30% !important;
+    }
+}
+
+
+
+
+
+
+
+

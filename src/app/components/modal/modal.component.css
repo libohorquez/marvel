@@ -1,0 +1,143 @@
+.center-modal {
+    text-align: center;
+    margin-top: .5em;
+}
+
+.text-container {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: .4em;
+    max-width: 80%;
+    font-size: .9em;
+}
+
+.sdx-btn-cerrar-modal {
+    background: #B5B5B5;
+    width: 50%;
+    text-transform: uppercase;
+    font-family: 'Sansa Pro', serif;
+    margin-top: 1.5em;
+    text-transform: none;
+}
+
+.btns {
+    width: auto;
+    height: 5%;
+    bottom: 0 !important;
+    text-align: center;
+}
+
+.btn-one,
+.btn-two {
+    width: 50%;
+    height: 4em;
+    color: #ec262b;
+    display: inline-block;
+}
+
+.modal-btn-one,
+.modal-btn-two {
+    width: 100%;
+    height: 100%;
+}
+
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.btns {
+    width: 50%;
+    height: 4em;
+    line-height: 4em;
+}
+
+.modal-btn-favourites {
+    background-color: #5c5858;
+    color: #000;
+    border: none;
+    text-decoration: none;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.modal-btn-favourites:hover {
+    background-color: #8b8585;
+}
+
+.modal-btn-buy {
+    background-color: #dbcdcd;
+    color: #ec262b;
+    border: none;
+    text-decoration: none;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.modal-btn-buy:hover {
+    background-color: #ebe4e4;
+}
+
+.btns-container img {
+    width: 8%;
+    vertical-align: sub;
+}
+
+.modal-btn-close {
+    margin-top: 0;
+    border-radius: 0;
+    width: 52px;
+    height: 52px;
+    position: contents;
+    right: .3em;
+    top: 0;
+    float: right;
+}
+
+.marvel-icon-pointer {
+    cursor: pointer;
+    float: right;
+}
+
+.marvel-character-img {
+    width: 5em;
+}
+
+.marvel-may {
+text-transform: capitalize;
+}
+
+.marvel-rnd {
+cursor: pointer;
+text-align: center;
+}
+
+.marvel-modal-flex-container {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1;
+  }
+  
+  .marvel-modal-flex-container > div {
+    width: auto;
+    margin: 10px;
+    text-align: left;
+  }
+
+
+  hr {
+      border-color: #ec262b;
+  }
+
+
+/****** MEDIA QUERIES ******/
+
+@media screen and (max-width: 450px) {
+    .sdx-btn-cerrar-modal {
+        font-size: .8em;
+    }
+}
